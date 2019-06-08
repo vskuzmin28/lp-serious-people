@@ -1,0 +1,22 @@
+mixin head(data)
+    - data = data || {};
+    head
+        meta(charset='utf-8')
+        meta(name='viewport', content='width=device-width, initial-scale=1')
+        meta(name="theme-color" content="#F47821")
+        link(rel="shortcut icon" href="img/favicon.png" type="image/png")  
+        //link(rel="icon" type="image/png" href="../img/favicons/16x16.png" sizes="16x16")
+        //link(rel="icon" type="image/png" href="../img/favicons/32x32.png" sizes="32x32")
+        //link(rel="icon" type="image/png" href="../img/favicons/96x96.png" sizes="96x96")
+        title!=data.title
+        link(rel='stylesheet', href='../styles/normalize.css')
+        link(rel='stylesheet', href='../styles/animate.css')
+        link(rel='stylesheet', href='../styles/style.css')
+
+        link(rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css")
+
+        // HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries
+        // WARNING: Respond.js doesn't work if you view the page via file://
+        //if lt IE 9
+        script(src='https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js')
+        script(src='https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js')

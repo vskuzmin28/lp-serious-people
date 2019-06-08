@@ -1,0 +1,12 @@
+mixin header(data)
+    - data = data || {};
+    header.header(class = data.class role = data.role)
+        .container.header__container
+            a.header__logo(href = data.link, title = data.title)
+                img(src = data.src, alt = data.alt)
+            .header__site-info
+                p.header__desc!=data.desc
+                span.header__keys!=data.keys
+            .header__call-info
+                a.header__phonenumber(href="#" title="")!=data.phonenumber
+                a.call-popop.header__call-popup(href = data.tel title="") Заказать обратный звонок

@@ -1,0 +1,83 @@
+// header
+
+.header {
+    height: 72px;
+
+    &_fixed {
+        position: absolute;
+        top: 0;
+        width: 100%;
+    }
+
+    .header__container {
+        margin-top: 53px;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .header__logo {
+        margin-right: 52px;
+        width: 272px;
+        height: 72px;
+    }
+
+    .header__site-info {
+        flex-grow: 1;
+    }
+
+    .header__desc {
+        margin: 0;
+        margin-top: -5px;
+        margin-bottom: 11px;
+        padding: 0;
+        width: 374px;
+        font-size: 18px;
+        line-height: 24px;
+        font-family: 'lator', sans-serif;
+        color: @white;
+    }
+
+    .header__keys {
+       text-transform: uppercase;
+       font-weight: bold;
+       font-size: 14px;
+       font-family: 'serifb';
+       color: @yellow;
+    }
+
+    .header__phonenumber {
+        margin: 4px 0 0 0;
+        width: 100%;
+        height: auto;
+        display: block;
+        font-size: 32px;
+        font-family: 'serifb', sans-serif;
+        font-weight: bold;
+        color: @white;
+        line-height: 38px;
+        text-decoration: none;
+        text-align: right;
+    }
+
+    .header__call-popup {
+        margin-top: 4px;
+        width: 100%;
+        text-align: right;
+        font-display: 18px;
+        font-family: 'lator', sans-serif;
+        text-decoration: underline;
+        color: @yellow;
+    }
+
+    .header__call-info {
+        width: 240px;
+
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: right;
+    }
+
+}
+
+// / header

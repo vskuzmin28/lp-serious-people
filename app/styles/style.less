@@ -1,0 +1,61 @@
+// normalize
+
+@import '../styles/normalize.css';
+
+// fonts & variables
+
+@import url('https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i&subset=cyrillic,cyrillic-ext');
+
+@import '../styles/fonts.css';
+@import '../styles/helpers/variables.less';
+@import '../styles/helpers/sprite.less';
+
+// SETTINGS //
+
+a {
+  cursor: pointer;
+  color: @orange;
+  font-weight: 500;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+}
+
+// animation
+
+a, a:hover {
+	transition: all 0.5s ease-in-out;
+}
+
+// body
+
+body {
+  background: #E5E5E5;
+	cursor: default;
+  overflow-x: hidden;
+}
+
+// selection
+
+body *::-moz-selection {
+  background: @yellow;
+  color: @black;
+}
+
+body *::-webkit-selection {
+  background: @yellow;
+  color: @black;
+}
+
+body *::selection {
+  background: @yellow;
+  color: @black;
+}
+
+.container {
+  margin: 0 auto;
+  width: 1276px;
+}
