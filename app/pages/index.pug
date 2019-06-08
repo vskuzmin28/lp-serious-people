@@ -1,16 +1,21 @@
-include ../blocks/head/head.pug
+include ../blocks/head/head
 include ../blocks/header/header
+include ../blocks/main/main
 
 doctype html
 html(lang='ru')
   +head({
-    title: 'СЕРЬЕЗНЫЕ ЛЮДИ - БЮРО ПРАВОВОЙ ЭКСПЕРТИЗЫ'
+    title: 'СЕРЬЕЗНЫЕ ЛЮДИ - БЮРО ПРАВОВОЙ ЭКСПЕРТИЗЫ',
+    keywords: '',
+    description: ''
   })
   body
 
     // header
     +header({
+      role: 'header',
       link: '',
+      class: 'header_fixed',
       title: 'Оформление земельно-имущественных отношений в Москве и Московской области.',
       src: '../img/logo.png',
       alt: '@@',
@@ -21,11 +26,12 @@ html(lang='ru')
     })
 
     // main
-    //+main({
-      title: 'Оформим документы на землю и недвижимость, поможем решить Ваши задачи в государственных органах,',
-      strong: 'даже если Вам уже отказали',
+    +main({
+      role: 'main',
+      class: 'contianer__main',
+      title: 'Оформим документы на землю и недвижимость, поможем решить Ваши задачи в государственных органах, даже если Вам уже отказали',
       description: 'ГАРАНТИЯ РЕЗУЛЬТАТА ЗАКРЕПЛЕНА В ДОГОВОРЕ'
-    //})
+    })
 
     // team
     //+({

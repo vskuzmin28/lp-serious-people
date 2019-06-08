@@ -4,28 +4,28 @@
     height: 72px;
 
     &_fixed {
+        margin-top: 53px;
         position: absolute;
         top: 0;
         width: 100%;
     }
 
-    .header__container {
-        margin-top: 53px;
+    &__container {
         display: flex;
         flex-direction: row;
     }
 
-    .header__logo {
+    &__logo {
         margin-right: 52px;
         width: 272px;
         height: 72px;
     }
 
-    .header__site-info {
+    &__site-info {
         flex-grow: 1;
     }
 
-    .header__desc {
+    &__desc {
         margin: 0;
         margin-top: -5px;
         margin-bottom: 11px;
@@ -37,7 +37,7 @@
         color: @white;
     }
 
-    .header__keys {
+    &__keys {
        text-transform: uppercase;
        font-weight: bold;
        font-size: 14px;
@@ -45,7 +45,7 @@
        color: @yellow;
     }
 
-    .header__phonenumber {
+    &__phonenumber {
         margin: 4px 0 0 0;
         width: 100%;
         height: auto;
@@ -57,9 +57,13 @@
         line-height: 38px;
         text-decoration: none;
         text-align: right;
+
+        &:hover {
+            text-decoration: none;
+        }
     }
 
-    .header__call-popup {
+    &__call-popup {
         margin-top: 4px;
         width: 100%;
         text-align: right;
@@ -69,7 +73,7 @@
         color: @yellow;
     }
 
-    .header__call-info {
+    &__call-info {
         width: 240px;
 
         display: flex;

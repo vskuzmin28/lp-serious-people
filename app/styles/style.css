@@ -39,24 +39,24 @@ body *::selection {
   height: 72px;
 }
 .header_fixed {
+  margin-top: 53px;
   position: absolute;
   top: 0;
   width: 100%;
 }
-.header .header__container {
-  margin-top: 53px;
+.header__container {
   display: flex;
   flex-direction: row;
 }
-.header .header__logo {
+.header__logo {
   margin-right: 52px;
   width: 272px;
   height: 72px;
 }
-.header .header__site-info {
+.header__site-info {
   flex-grow: 1;
 }
-.header .header__desc {
+.header__desc {
   margin: 0;
   margin-top: -5px;
   margin-bottom: 11px;
@@ -67,14 +67,14 @@ body *::selection {
   font-family: 'lator', sans-serif;
   color: #fff;
 }
-.header .header__keys {
+.header__keys {
   text-transform: uppercase;
   font-weight: bold;
   font-size: 14px;
   font-family: 'serifb';
   color: #BE9D6A;
 }
-.header .header__phonenumber {
+.header__phonenumber {
   margin: 4px 0 0 0;
   width: 100%;
   height: auto;
@@ -87,7 +87,10 @@ body *::selection {
   text-decoration: none;
   text-align: right;
 }
-.header .header__call-popup {
+.header__phonenumber:hover {
+  text-decoration: none;
+}
+.header__call-popup {
   margin-top: 4px;
   width: 100%;
   text-align: right;
@@ -96,12 +99,35 @@ body *::selection {
   text-decoration: underline;
   color: #BE9D6A;
 }
-.header .header__call-info {
+.header__call-info {
   width: 240px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   text-align: right;
+}
+.main {
+  height: 900px;
+  overflow: hidden;
+  background: url('../img/main-background.jpg') no-repeat;
+  text-align: center;
+}
+.main__title {
+  margin: 0;
+  margin-top: 340px;
+  padding: 0;
+  color: #fff;
+  font-size: 52px;
+  font-family: 'serifr', sans-serif;
+  line-height: 62px;
+}
+.main__description {
+  margin-top: 50px;
+  font-size: 28px;
+  font-family: 'lator', sans-serif;
+  line-height: 24px;
+  color: #BE9D6A;
+  text-transform: uppercase;
 }
 /*
 LESS variables are information about icon's compiled state, stored under its original file name
