@@ -1,6 +1,7 @@
 // main
 
 .main {
+    position: relative;
     height: 900px;
     overflow: hidden;
     background: url('../img/main-background.jpg') no-repeat;
@@ -23,6 +24,14 @@
         line-height: 24px;
         color: @yellow;
         text-transform: uppercase;
+    }
+
+    &__grd {
+        bottom: 0;
+        width: 100%;
+        position: absolute;
+        height: 262px;
+        background: url('../img/main-grd.png') repeat-x;
     }
 
 }

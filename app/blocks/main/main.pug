@@ -1,6 +1,7 @@
 mixin main(data)
     - data = data || {};
     section.main(class = data.class role = data.role)
+        .main__grd
         .container.main__container
             h1.main__title!=data.title
             p.main__description!=data.description

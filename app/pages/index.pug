@@ -1,6 +1,8 @@
 include ../blocks/head/head
 include ../blocks/header/header
 include ../blocks/main/main
+include ../blocks/team/team
+include ../blocks/sign-up/sign-up
 
 doctype html
 html(lang='ru')
@@ -34,14 +36,21 @@ html(lang='ru')
     })
 
     // team
-    //+({
-
-    //})
+    +team({
+      title: 'Наша команда имеет огромный опыт в сфере оформления недвижимости',
+      items: [
+        {title: '10 000+ часов', description: 'судебной практики по делам в сфере земельно-имущественных отношений'},
+        {title: 'Пять юристов высокого класса', description: 'с опытом работы в государственных структурах'},
+        {title: '21 год опыта', description: 'в сфере земельно-имущественных отношений '}
+      ],
+      photo: '../img/team.png',
+      alt: '@@'
+    })
 
     // sign-up
-    //+({
+    +sign-up({
       
-    //})
+    })
 
     // specialists
     //+({

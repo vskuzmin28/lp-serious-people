@@ -1,6 +1,13 @@
-mixin main(data)
+mixin team(data)
     - data = data || {};
-    section.main(class = data.class role = data.role)
-        .container.main__container
-            h1.main__title!=data.title
-            p.main__description!=data.description
+    section.team(class = data.class role = data.role)
+        .container.team__container
+            h2.team__title!=data.title
+            ul.team__list
+                each team in data.items
+                    li.team__list-item
+                        p.team__list-title!=team.title
+                        span.team__list-desc!=team.description
+            .team__photo
+                img(src = data.photo alt = data.alt)
+                    
