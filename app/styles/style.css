@@ -3,12 +3,13 @@
 @import '../styles/fonts.css';
 a {
   cursor: pointer;
-  color: #F47821;
-  font-weight: 500;
-  text-decoration: none;
+  color: #000;
+  font-weight: 400;
+  text-decoration: underline;
 }
 a:hover {
   text-decoration: underline;
+  opacity: 1;
 }
 a,
 a:hover {
@@ -89,6 +90,7 @@ body *::selection {
   text-align: right;
 }
 .header__phonenumber:hover {
+  color: #BE9D6A;
   text-decoration: none;
 }
 .header__call-popup {
@@ -99,6 +101,10 @@ body *::selection {
   font-family: 'lator', sans-serif;
   text-decoration: underline;
   color: #BE9D6A;
+  opacity: 0.7;
+}
+.header__call-popup:hover {
+  opacity: 1;
 }
 .header__call-info {
   width: 240px;
@@ -199,6 +205,121 @@ body *::selection {
   position: absolute;
   height: 262px;
   background: url('../img/main-grd.png') repeat-x;
+}
+.sign-up {
+  padding: 60px 0;
+  background: #fff;
+}
+.sign-up__title {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-size: 42px;
+  font-family: 'serifr', sans-serif;
+  color: #000;
+  line-height: 50px;
+}
+.sign-up__form {
+  margin-top: -4px;
+}
+.sign-up__body {
+  margin: 0 auto;
+  margin-top: 40px;
+  width: 980px;
+  display: flex;
+  flex-direction: row;
+}
+.sign-up__phonenumber,
+.sign-up__form {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+.sign-up__phonenumber-title {
+  margin-left: 36px;
+  margin-bottom: 13px;
+  font-size: 22px;
+  font-family: 'lator', sans-serif;
+  color: #000;
+}
+.sign-up__phonenumber-call {
+  height: 55px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 42px;
+  font-family: 'serifb';
+  font-weight: bold;
+  line-height: 50px;
+  color: #000;
+  text-decoration: none;
+}
+.sign-up__phonenumber-call:hover {
+  text-decoration: none;
+  color: #BE9D6A;
+}
+.sign-up_phonenumber-icon {
+  display: block;
+  width: 24px;
+  height: 24px;
+}
+.sign-up .sign-up__phonenumber-space {
+  display: block;
+  width: 12px;
+  height: 55px;
+}
+.form {
+  display: flex;
+}
+.form__title {
+  font-size: 22px;
+  font-family: 'lator', sans-serif;
+  color: #000;
+}
+.form__body {
+  display: flex;
+  flex-direction: row;
+}
+.form__input[type='text'] {
+  padding: 0 22px;
+  width: 300px;
+  height: 52px;
+  border: 2px solid #b2b2b2;
+  outline: none;
+  box-sizing: border-box;
+  font-size: 18px;
+  font-family: 'lator', sans-serif;
+  color: #000;
+}
+.form__input[type='button'] {
+  width: 230px;
+  height: 52px;
+  background: #BE9D6A;
+  font-size: 18px;
+  font-family: 'latob', sans-serif;
+  font-weight: bold;
+  border: 0;
+  outline: none;
+  color: #fff;
+  cursor: pointer;
+}
+.form__input[type='button']:hover {
+  background: #C6AC85;
+}
+.form__input[type='button']:focus {
+  background: #A38E6D;
+}
+.form__small-desc {
+  margin-top: 8px;
+  font-size: 14px;
+  font-family: 'lator', sans-serif;
+  color: rgba(0, 0, 0, 0.3);
+}
+.form__small-desc a {
+  opacity: 0.3;
+}
+.form__small-desc a:hover {
+  opacity: 1;
 }
 /*
 LESS variables are information about icon's compiled state, stored under its original file name

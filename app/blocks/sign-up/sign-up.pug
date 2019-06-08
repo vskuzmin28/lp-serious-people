@@ -1,4 +1,18 @@
 mixin sign-up(data)
     - data = data || {};
     section.sign-up(class = data.class role = data.role)
+        h2.sign-up__title!=data.title
+        .sign-up__body
+            .sign-up__phonenumber
+                p.sign-up__phonenumber-title Позвоните нам
+                a.sign-up__phonenumber-call(href="#" title="")
+                    img.sign-up__phonenumber-icon(src='../img/icons/icon-1.png' alt='@@')
+                    .sign-up__phonenumber-space
+                    !=data.phone
+            form.form.sign-up__form(action='/' method='post')
+                p.form__title Или закажите обратный звонок
+                .form__body
+                    input.form__input(type="text" placeholder='Номер телефона')
+                    input.form__input(type='button' value='Заказать звонок')
+                span.form__small-desc Нажимая на кнопку, вы соглашаетесь с <a href="#" title="">политикой конфиденциальности</a>
                     

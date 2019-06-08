@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <meta name="theme-color" content="#F47821"/>
+    <meta name="theme-color" content="#1c1c40"/>
     <link rel="shortcut icon" href="img/favicon.png" type="image/png"/>
     <!--link(rel="icon" type="image/png" href="../img/favicons/16x16.png" sizes="16x16")-->
     <!--link(rel="icon" type="image/png" href="../img/favicons/32x32.png" sizes="32x32")-->
@@ -12,7 +12,6 @@
     <link rel="stylesheet" href="../styles/normalize.css"/>
     <link rel="stylesheet" href="../styles/animate.css"/>
     <link rel="stylesheet" href="../styles/style.css"/>
-    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"/>
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries-->
     <!-- WARNING: Respond.js doesn't work if you view the page via file://-->
     <!--if lt IE 9-->
@@ -22,7 +21,7 @@
   <body>
     <!-- header-->
     <header class="header header_fixed" role="header">
-      <div class="container header__container"><a class="header__logo" href="" title="Оформление земельно-имущественных отношений в Москве и Московской области."><img src="../img/logo.png" alt="@@"/></a>
+      <div class="container header__container"><a class="header__logo" href="#" title="Оформление земельно-имущественных отношений в Москве и Московской области."><img src="../img/logo.png" alt="@@"/></a>
         <div class="header__site-info">
           <p class="header__desc">Оформление земельно-имущественных отношений в Москве и Московской области.</p><span class="header__keys">Анализ. Сопровождение. Результат.</span>
         </div>
@@ -38,7 +37,7 @@
       </div>
     </section>
     <!-- team-->
-    <section class="team">
+    <section class="team" role="team">
       <div class="container team__container">
         <h2 class="team__title">Наша команда имеет огромный опыт в сфере оформления недвижимости</h2>
         <ul class="team__list">
@@ -56,7 +55,22 @@
       </div>
     </section>
     <!-- sign-up-->
-    <section class="sign-up"></section>
+    <section class="sign-up" role="sign up">
+      <h2 class="sign-up__title">Запишитесь на консультацию</h2>
+      <div class="sign-up__body">
+        <div class="sign-up__phonenumber">
+          <p class="sign-up__phonenumber-title">Позвоните нам</p><a class="sign-up__phonenumber-call" href="#" title=""><img class="sign-up__phonenumber-icon" src="../img/icons/icon-1.png" alt="@@"/>
+            <div class="sign-up__phonenumber-space"></div>8 800 444 33 48</a>
+        </div>
+        <form class="form sign-up__form" action="/" method="post">
+          <p class="form__title">Или закажите обратный звонок</p>
+          <div class="form__body">
+            <input class="form__input" type="text" placeholder="Номер телефона"/>
+            <input class="form__input" type="button" value="Заказать звонок"/>
+          </div><span class="form__small-desc">Нажимая на кнопку, вы соглашаетесь с <a href="#" title="">политикой конфиденциальности</a></span>
+        </form>
+      </div>
+    </section>
     <!-- specialists-->
     <!--+({-->
     <!--})-->
