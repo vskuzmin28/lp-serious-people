@@ -1,0 +1,33 @@
+mixin skill(data)
+    - data = data || {};
+    section.skill(class = data.class role = data.role)
+        .container.skill__container
+            h2.skill__title!=data.title
+            p.skill__desc!=data.description
+            h3.skill__subtitle!=data.subtitle
+            .skill__body
+                ul.skill__list
+                    each skill in data.companies
+                        li.skill__item
+                            .skill__item-icon
+                                img(src = skill.icon alt='@@')
+                            .skill__item-content
+                                p.skill__item-content-title!=skill.title
+                                span.skill__item-content-desc!=skill.description
+                hr.skill__line
+                ul.skill__list
+                    each skill2 in data.midCompanies
+                        li.skill__item
+                            .skill__item-icon.skill__item-icon_small
+                                img(src = skill2.icon alt='@@')
+                            .skill__item-content
+                                p.skill__item-content-title!=skill2.title
+                                span.skill__item-content-desc!=skill2.description
+                hr.skill__line
+                ul.skill__list
+                    each skill3 in data.lowCompanies
+                        li.skill__item
+                            .skill__item-icon.skill__item-icon_small
+                                img(src = skill3.icon alt='@@')
+                            .skill__item-content
+                                span.skill__item-content-desc!=skill3.description

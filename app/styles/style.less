@@ -56,7 +56,110 @@ body *::selection {
   color: @white;
 }
 
+// container
+
 .container {
   margin: 0 auto;
   width: 1276px;
+}
+
+// form
+
+.form {
+  display: flex;
+
+  &__title {
+      font-size: 22px;
+      font-family: 'lator', sans-serif;
+      color: @black;
+  }
+
+  &__body {
+      display: flex;
+      flex-direction: row;
+  }
+
+  &__input[type='text'] {
+      padding: 0 22px;
+      width: 300px;
+      height: 52px;
+      border: 2px solid @gray;
+      outline: none;
+      box-sizing: border-box;
+      font-size: 18px;
+      font-family: 'lator', sans-serif;
+      color: @black;
+
+      &:hover, &:focus {
+          border-color: @yellow;
+      }
+  }
+
+  &__input[type='button'] {
+      width: 230px;
+      height: 52px;
+      background: @yellow;
+      font-size: 18px;
+      font-family: 'latob', sans-serif;
+      font-weight: bold;
+      border: 0;
+      outline: none;
+      color: @white;
+      cursor: pointer;
+
+      &:hover {
+          background: @yellow-light;
+      }
+
+      &:focus {
+          background: @yellow-dark;
+      }
+  }
+
+  &__small-desc {
+      margin-top: 8px;
+      font-size: 14px;
+      font-family: 'lator', sans-serif;
+      color: rgba(0, 0, 0, 0.3);
+
+      a {
+          opacity: 0.3;
+
+          &:hover {
+              opacity: 1;
+          }
+
+      }
+
+  }
+
+}
+
+// button
+
+.button {
+
+}
+
+// blocks
+
+.block {
+  position: relative;
+  width: 50%;
+
+  &_gray {
+    background: @gray-light;
+  }
+
+  &_blue {
+    background: @blue-dark;
+  }
+
+}
+
+@media screen and (max-width: @desktop) {
+  .container {
+    margin: 0 auto;
+    width: 90%;
+  }
 }

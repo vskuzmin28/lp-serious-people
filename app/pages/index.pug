@@ -3,6 +3,14 @@ include ../blocks/header/header
 include ../blocks/main/main
 include ../blocks/team/team
 include ../blocks/sign-up/sign-up
+include ../blocks/specialists/specialists
+include ../blocks/cases/cases
+include ../blocks/skill/skill
+include ../blocks/plan/plan
+include ../blocks/situations/situations
+include ../blocks/contacts/contacts
+include ../blocks/footer/footer
+//include ../blocks/popups/popups
 
 doctype html
 html(lang='ru')
@@ -67,24 +75,84 @@ html(lang='ru')
     //})
 
     // skill
-    //+({
-      
-    //})
+    +skill({
+      role: 'skill',
+      title: 'У нас большой опыт работы с государственными органами',
+      description: 'Это позволяет прогнозировать выводы, решения государственных структур и предотвращать отрицательный результат.',
+      subtitle: 'Мы работаем со всеми структурами Правительства Москвы, регулирующими сферу строительства и недвижимости',
+      companies: [
+        {icon: '../img/icons/icon-6.png', title: 'ДГИ', description: 'Департамент городского имущества города Москвы'},
+        {icon: '../img/icons/icon-7.png', title: 'МОСКОМАРХИТЕКТУРА', description: 'Комитет по архитектуре и градостроительству города Москвы'},
+        {icon: '../img/icons/icon-8.png', title: 'РОСРЕЕСТР', description: 'Федеральная служба государственной регистрации, кадастра и картографии'},
+        {icon: '../img/icons/icon-9.png', title: 'Государственная инспекция', description: 'по контролю за использованием объектов недвижимости города Москвы'},
+        {icon: '../img/icons/icon-10.png', title: 'ГЗК', description: 'Градостроительно-земельная комиссия города Москвы'},
+        {icon: '../img/icons/icon-7.png', title: 'МОСГОРНАСЛЕДИЕ', description: 'Департамент культурного наследия города Москвы'}
+      ],
+      midCompanies: [
+        {icon: '../img/icons/icon-11.png', title: 'БТИ', description: 'Московское городское Бюро технической инвентаризации'},
+        {icon: '../img/icons/icon-11.png', title: 'ТЕНДЕРНЫЙ КОМИТЕТ', description: 'Департамент города Москвы по конкурентной политике'},
+        {icon: '../img/icons/icon-11.png', title: 'РОСПОТРЕБНАДЗОР', description: 'Федеральная служба по надзору в сфере защиты прав потребителей и благополучия человека'},
+        {icon: '../img/icons/icon-11.png', title: 'ЖИЛИНСПЕКЦИЯ', description: 'Государственная жилищная инспекция города Москвы'}
+      ],
+      lowCompanies: [
+        {icon: '../img/icons/icon-11.png', description: 'Департамент развития новых территорий города Москвы'},
+        {icon: '../img/icons/icon-11.png', description: 'Департамент градостроительной политики города Москвы'},
+        {icon: '../img/icons/icon-11.png', description: 'Департамент инвестиционной и промышленной политики города Москвы'},
+        {icon: '../img/icons/icon-11.png', description: 'Префектуры и управы административных округов города Москвы'}
+      ]
+    })
 
-    // sadasd
-    //+({
-      
-    //})
+    // plan
+    +plan({
+      role: 'plan',
+      title: 'Если Вы уже столкнулись с судебными разбирательствами',
+      description: 'Мы проанализируем ситуацию, изучим судебную практику и подготовим план дальнейших действий',
+      items: [
+        {icon: '../img/icons/icon-2.png', title: 'Хотите защитить свои права в суде?', description: 'Изучим судебную практику по Вашему случаю, составим иск в суд и представим Ваши интересы'},
+        {icon: '../img/icons/icon-3.png', title: 'Вас привлекли в качестве ответчика?', description: 'Изучим судебную практику и проработаем правовую позицию для защиты прав в суде'},
+        {icon: '../img/icons/icon-4.png', title: 'Хотите решить спор без суда?', description: 'Проработаем возможность заключения мирового соглашения и иные варианты решения судебного спора'},
+        {icon: '../img/icons/icon-5.png', title: 'Обеспечим выполнение решения суда и получим все документы', description: 'Выполним все необходимые действия для получения Вами документов'}
+      ],
+      photo: '../img/specialists.png'
+    })
+
+    // situations
+    +situations({
+      role: 'situations',
+      title: 'Почему не стоит пытаться разрешить ситуацию самостоятельно или доверять решение вопроса специалистам «широкого» профиля?',
+    })
+
+    // sign up
+    +sign-up({
+      role: 'sign up',
+      title: 'Запишитесь на консультацию',
+      phone: '8 800 444 33 48',
+      tel: '88004443348'
+    })
 
     // contacts
-    //+({
-      
-    //})
+    +contacts({
+      role: 'contacts',
+      phonenumber: '8 800 444 33 48',
+      tel: 'tel:88004443348',
+      address: 'г. Москва, Подольское ш., 8, к5',
+      email: 'hello@seriousman.ru',
+      mailto: 'mailto:hello@seriousman.ru'
+    })
 
     // footer
-    //+({
-      
-    //})
+    +footer({
+      role: 'footer',
+      link: '#',
+      title: 'Оформление земельно-имущественных отношений в Москве и Московской области.',
+      src: '../img/logo.png',
+      alt: '@@',
+      desc: 'Оформление земельно-имущественных отношений в Москве и Московской области.',
+      keys: 'Анализ. Сопровождение. Результат.',
+      phonenumber: '8 800 444 33 48',
+      tel: 'tel:88004443348',
+      copyright: '© 2012-2019, ООО «Серьезные люди»'
+    })
 
     // scripts
     script(src='../js/jquery-3.2.1.min.js')

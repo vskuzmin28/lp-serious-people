@@ -1,0 +1,13 @@
+mixin situations(data)
+    - data = data || {};
+    section.situations(class = data.class role = data.role)
+        .container.situations__container
+            .block.block_blue.situations__block
+                h2.situations__title!=data.title
+            .block.block_gray.situations__block
+                p.situations__desc Земельно-правовые отношения — специфическая сфера законодательства.
+                p.situations__desc Наши юристы имеют опыт работы в государственных органах и более 10 000 часов судебной практики в этой сфере.
+                .note.situations__note
+                    p.note__desc Незнание тонкостей оформления приводит к тому, что 90% истцов по делам в сфере недвижимости и земельно-правовых отношений делают неисправимые ошибки ещё на этапе подготовки документов.
+                    p.note__desc.note__desc_small
+                        span.note__text-bold Оформление документов становится невозможным и может привести к потере имущества.

@@ -1,19 +1,21 @@
-// header
+// footer
 
-.header {
-    height: 72px;
-
-    &_fixed {
-        margin-top: 53px;
-        position: absolute;
-        top: 0;
-        width: 100%;
-        z-index: 10;
-    }
+.footer {
+    height: 258px;
+    background: @blue-dark;
+    overflow: hidden;
 
     &__container {
+        margin-top: 53px;
         display: flex;
         flex-direction: row;
+
+        &_small {
+            margin-top: 51px;
+            height: 22px;
+            align-items: center;
+        }
+
     }
 
     &__logo {
@@ -47,7 +49,7 @@
     }
 
     &__phonenumber {
-        margin: 4px 0 0 0;
+        margin: -4px 0 8px 0;
         width: 100%;
         height: auto;
         display: block;
@@ -67,16 +69,22 @@
 
     &__call-popup {
         margin-top: 4px;
-        width: 100%;
-        text-align: right;
+        width: 230px;
+        height: 48px;
+        border: 2px solid @yellow;
+        background: 0;
         font-size: 18px;
-        font-family: 'lator', sans-serif;
-        text-decoration: underline;
-        color: @yellow;
-        opacity: 0.7;
+        font-family: 'latob', sans-serif;
+        font-weight: bold;
+        text-decoration: none;
+        color: @white;
+        display: flex;
+        justify-content: center;
+        line-height: 44px;
 
         &:hover {
-            opacity: 1;
+            text-decoration: none;
+            background: @yellow;
         }
     }
 
@@ -85,10 +93,32 @@
 
         display: flex;
         flex-direction: column;
-        align-items: flex-start;
+        align-items: flex-end;
         text-align: right;
+    }
+
+    &__copyright {
+        flex-grow: 1;
+        font-size: 14px;
+        line-height: 24px;
+        font-family: 'lator', sans-serif;
+        color: @white;
+        opacity: 0.5;
+    }
+
+    &__polytic {
+        font-size: 14px;
+        line-height: 24px;
+        font-family: 'lator', sans-serif;
+        color: @white;
+        opacity: 0.5;    
+        text-decoration: underline;
+
+        &:hover {
+            opacity: 1;
+        }
     }
 
 }
 
-// / header
+// / footer
