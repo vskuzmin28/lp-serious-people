@@ -1,19 +1,41 @@
-mixin plan(data)
+mixin specialists(data)
     - data = data || {};
-    section.plan(class = data.class role = data.role)
-        .container.plan__container
-            h2.plan__title-full!=data.title
-            p.plan__description!=data.description
-        .container.plan__container
-            .block.block_white.plan__block
-                ul.plan__list
-                    each plan in data.items
-                        li.plan__list-item 
-                            .plan__list-icon
-                                img(src = plan.icon alt='@@')
-                            .plan__list-body
-                                p.plan__list-title!=plan.title
-                                span.plan__list-desc!=plan.description
-            .block.block_transparent.plan__block
-                .plan__specialists
-                    img(src = data.photo alt='@@')
+    section.specialists(class = data.class role = data.role)
+        .container.specialists__container
+            h2.specialists__title!=data.title
+        .container.specialists__container
+            ul.specialists__list
+                each list in data.itemsList
+                    li.specialists__list-item
+                        a.specialists__list-link(class = list.class href="#" title="")
+                            .specialists__list-box
+                                p.specialists__list-surname!=list.surname
+                                p.specialists__list-name!=list.name
+                                span.specialists__list-post!=list.post
+                        img.specialists__list-photo(src = list.photo alt="@@")
+
+            .block.block_white.specialists__block
+                .specialists__space-top
+                .specialists__space-bottom
+                .specialists__slide
+                    each specialists in data.itemsSpec
+                        .specialists__slide-content(class = specialists.class)
+                            span.specialists__slide-post!=specialists.post
+                            h3.specialists__slide-name!=specialists.name
+                            .specialists__box
+                                h3.specialists__slide-skill Опыт
+                                p.specialists__slide-skill-content!=specialists.skill
+                                h3.specialists__slide-education-title Образование
+                                p.specialists__slide-education-content!=specialists.education
+                                p.specialists__slide-education-content!=specialists.about
+            .block.block_transparent.specialists__block
+                .specialists__photo.photoOne
+                    img(src='../img/specialists/1.png' alt="@@")
+                .specialists__photo.photoTwo
+                    img(src='../img/specialists/2.png' alt="@@")
+                .specialists__photo.photoThree
+                    img(src='../img/specialists/3.png' alt="@@")
+                .specialists__photo.photoFour
+                    img(src='../img/specialists/4.png' alt="@@")
+                .specialists__photo.photoFive
+                    img(src='../img/specialists/5.png' alt="@@")

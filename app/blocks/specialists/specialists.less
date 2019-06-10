@@ -1,10 +1,96 @@
-// situations
+// specialists
 
-.plan {
-    display: flex;
-    flex-direction: column;
-    height: auto;
-    background: url('../img/blan-background.png') repeat-x center;
+.specialists {
+    position: relative;
+    width: 100%;
+    height: 1240px;
+    background: @white url('../img/specialists-background.png') repeat-x center top;
+
+    &__photo {
+        margin-top: 24px;
+    }
+
+    &__list {
+        position: absolute;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 280px;
+        z-index: 10;
+        bottom: 140px;
+        display: flex;
+        justify-content: center;
+        list-style: none;
+
+        &-item {
+            margin-right: 24px;
+            position: relative;
+            width: 226px;
+            height: 270px;
+
+            &:last-child {
+                margin-right: 0;
+            }
+
+        }
+
+        &-link {
+            top: 0;
+            display: flex;
+            width: 100%;
+            height: 100%;
+            border: 5px solid transparent;
+            background: url('../img/specialist-link.png') repeat-x 0px 100px;
+            z-index: 112;
+            opacity: 1;
+            display: flex;
+            align-items: flex-end;
+            text-decoration: none;
+
+            &:hover, &_active {
+                border-color: @yellow;
+                text-decoration: none;
+            }
+
+        }
+
+        &-photo {
+            top: 0;
+            position: absolute;
+            z-index: -1;
+        }
+
+        &-box {
+            margin: 0 0 0 0;
+            display: flex;
+            flex-direction: column;
+        }
+
+        &-surname, &-name {
+            margin: 0 15px;
+            padding: 0;
+            display: block;
+            width: 100%;
+            font-size: 18px;
+            font-family: 'latob', sans-serif;
+            color: @white;
+            line-height: 22px;
+            text-decoration: none;
+        }
+
+        &-name {
+            margin-bottom: 4px;
+        }
+
+        &-post {
+            margin: 0 5px 11px 15px;
+            font-size: 14px;
+            font-family: 'lator', sans-serif;
+            color: @yellow;
+            line-height: 18px; 
+        }
+
+    }
 
     &__container {
         width: 100%;
@@ -20,96 +106,114 @@
 
     }
 
-    &__specialists {
-        position: absolute;
-        left: -22px;
-    }
-
-    &__title-full {
-        margin: 0;
-        margin-top: 80px;
-        padding: 0;
+    &__title {
+        margin: 80px 0 60px 0;
         font-size: 42px;
         font-family: 'serifb', sans-serif;
-        line-height: 50px;
+        font-weight: bold;
         color: @white;
+        text-align: center;
     }
 
-    &__description {
-        margin-top: 8px;
-        margin-bottom: 60px;
-        font-size: 22px;
-        font-family: 'lator', sans-serif;
-        color: @white;
-        opacity: 0.8;
-        line-height: 30px;
+    &__space-bottom {
+        bottom: 30px;
+        position: absolute;
+        width: 600px;
+        height: 60px;
+        background: url('../img/gradient4.png') repeat-x;
+    }
+
+    &__space-top {
+        top: 110px;
+        position: absolute;
+        width: 600px;
+        height: 60px;
+        background: url('../img/gradient4.png') repeat-x ;
+        transform: rotate(180deg);
+    }
+
+    &__box {
+        height: 370px;
+        padding-right: 60px;
+        overflow-y: auto;
+
+        &::-webkit-scrollbar { width: 0; }
+        & { -ms-overflow-style: none; }
+        & { overflow: -moz-scrollbars-none; }
+    }
+
+    &__slide {
+        margin-top: 48px;
+        width: 600px;
+        height: 432px;
+
+        &-content {
+
+        }
+
+        &-post {
+            font-size: 18px;
+            font-family: 'serifb', sans-serif;
+            font-weight: bold;
+            line-height: 24px;
+            color: @yellow;
+            margin-bottom: 8px;
+        }
+
+        &-name {
+            margin: 0;
+            padding: 0;
+            font-size: 32px;
+            font-family: 'serifb', sans-serif;
+            font-weight: bold;
+            line-height: 38px;
+            color: @black;
+            margin-bottom: 8px; 
+        }
+
+        &-skill, &-education {
+            font-size: 22px;
+            font-family: 'serifb', sans-serif;
+            line-height: 31px;
+            color: @black;
+            margin-bottom: 8px;
+
+            &-content {
+                margin: 0;
+                margin-bottom: 24px;
+                font-size: 18px;
+                font-family: 'lator', sans-serif;
+                color: @black;
+                line-height: 24px;
+            }
+
+        }
+
     }
 
     .block_white {
+        position: relative;
         display: flex;
         justify-content: flex-end;
         background: @white;
+
+        &:before {
+            bottom: -40px;
+            left: 0;
+            position: absolute;
+            content: '';
+            width: 95%;
+            height: 40px;
+            background: @white;
+            opacity: 0.1;
+        }
+
     }
 
     .block_transparent {
         background: 0;
     }
 
-    &__list {
-        width: 620px;
-        display: flex;
-        flex-direction: column;
-        margin: 0;
-        padding: 0;
-        margin-top: 50px;
-
-        &-item {
-            margin-bottom: 23px;
-            padding: 0;
-            list-style: none;
-            color: @black;
-            display: flex;
-            flex-direction: row;
-        }
-
-        &-icon {
-            margin-right: 20px;
-            width: 80px;
-            height: 80px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-
-            img {
-                margin: auto;
-                width: auto;
-                height: auto;
-            }
-
-        }
-
-        &-body {
-            width: auto;
-            width: 80%;
-        }
-
-        &-title {
-            margin: 0;
-            padding: 0;
-            margin-top: -6px;
-            font-size: 22px;
-            font-family: 'serifb';
-            font-weight: bold;
-            line-height: 31px;
-            margin-bottom: 4px;
-        }
-
-        &-desc {
-            font-size: 18px;
-            font-family: 'lator';
-            line-height: 24px;
-        }
-
-    }
-
 }
+
+// specialists

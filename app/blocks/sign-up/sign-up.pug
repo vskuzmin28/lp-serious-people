@@ -5,7 +5,7 @@ mixin sign-up(data)
         .sign-up__body
             .sign-up__phonenumber
                 p.sign-up__phonenumber-title Позвоните нам
-                a.sign-up__phonenumber-call(href="#" title="")
+                a.sign-up__phonenumber-call(href = data.tel title="")
                     img.sign-up__phonenumber-icon(src='../img/icons/icon-1.png' alt='@@')
                     .sign-up__phonenumber-space
                     !=data.phone
@@ -15,4 +15,25 @@ mixin sign-up(data)
                     input.form__input(type="text" placeholder='Номер телефона')
                     input.form__input(type='button' value='Заказать звонок')
                 span.form__small-desc Нажимая на кнопку, вы соглашаетесь с <a href="#" title="">политикой конфиденциальности</a>
-                    
+
+mixin sign-up-detail(data)
+    - data = data || {};
+    section.sign-up-detail(class = data.class role = data.role)
+        .container.sign-up-detail__container
+            .sign-up-detail__column
+                h2.sign-up-detail__title!=data.title
+                p.sign-up-detail__desc!=data.description
+            .sign-up-detail__column
+                h3.sign-up-detail__subtitle Запишитесь на консультацию
+                .sign-up-detail__block
+                    p.sign-up-detail__block-title По телефону
+                    a.sign-up-detail__block-phone(href = data.tel title="")!=data.phone
+                .sign-up-detail__block
+                    form.form.sign-up-detail__form(action='/' method='post')
+                        p.form__title Или закажите обратный звонок
+                        .form__body
+                            input.form__input(type="text" placeholder='Номер телефона')
+                            input.form__input(type='button' value='Заказать звонок')
+                        span.form__small-desc Нажимая на кнопку, вы соглашаетесь с <a href="#" title="">политикой конфиденциальности</a>
+
+

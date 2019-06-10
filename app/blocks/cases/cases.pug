@@ -1,19 +1,36 @@
-mixin plan(data)
+mixin cases(data)
     - data = data || {};
-    section.plan(class = data.class role = data.role)
-        .container.plan__container
-            h2.plan__title-full!=data.title
-            p.plan__description!=data.description
-        .container.plan__container
-            .block.block_white.plan__block
-                ul.plan__list
-                    each plan in data.items
-                        li.plan__list-item 
-                            .plan__list-icon
-                                img(src = plan.icon alt='@@')
-                            .plan__list-body
-                                p.plan__list-title!=plan.title
-                                span.plan__list-desc!=plan.description
-            .block.block_transparent.plan__block
-                .plan__specialists
-                    img(src = data.photo alt='@@')
+    section.cases(class = data.class role = data.role)
+        .container.cases__container
+            .cases__block
+                h2.cases__title!=data.title
+                .slider-buttons.cases__slider-buttons
+                    .slider-buttons__button.slider-buttons__prev
+                        img(src='../img/icons/icon-12.png' alt="@@")
+                    .slider-buttons__button.slider-buttons__next
+                        img(src='../img/icons/icon-12.png' alt="@@")
+                .slider.cases__slider
+                    ul.slider-nav
+                        each cases in data.items
+                            li.slider-nav__item
+                                a.slider-nav__link(class = cases.class href="#" title="")
+                                    .slider-nav__link-title!=cases.title
+                                    .slider-nav__link-description!=cases.description
+                                .slider-nav__item-background
+                                    img(src = cases.image alt="@@")
+                .slides-body
+                    .slides-body__space-top
+                    .slides-body__space-bottom
+                    ul.slides.cases__slides
+                        each slides in data.itemsSlides
+                            li.slides__item(class = slides.class)
+                                span.slides__name!=slides.name
+                                h3.slides__main-title!=slides.title
+                                h4.slides__title Задача
+                                p.slides__desc!=slides.task
+                                h4.slides__title Вводная:
+                                p.slides__desc!=slides.introductory
+                                h4.slides__title Решение:
+                                p.slides__desc!=slides.decision
+                                p.slides__desc!=slides.decisionMore
+                                p.slides__desc!=slides.total
