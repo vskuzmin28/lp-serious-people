@@ -6,10 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
     <meta name="theme-color" content="#1c1c40"/>
     <link rel="shortcut icon" href="img/favicon.png" type="image/png"/>
-    <!--link(rel="icon" type="image/png" href="../img/favicons/16x16.png" sizes="16x16")-->
-    <!--link(rel="icon" type="image/png" href="../img/favicons/32x32.png" sizes="32x32")-->
-    <!--link(rel="icon" type="image/png" href="../img/favicons/96x96.png" sizes="96x96")-->
+    <link rel="icon" type="image/png" href="../img/favicons/16x16.png" sizes="16x16"/>
+    <link rel="icon" type="image/png" href="../img/favicons/32x32.png" sizes="32x32"/>
+    <link rel="icon" type="image/png" href="../img/favicons/96x96.png" sizes="96x96"/>
     <title>СЕРЬЕЗНЫЕ ЛЮДИ - БЮРО ПРАВОВОЙ ЭКСПЕРТИЗЫ</title>
+    <meta name="description" content=""/>
+    <meta name="keywords" content=""/>
     <link rel="stylesheet" href="../styles/normalize.css"/>
     <link rel="stylesheet" href="../styles/animate.css"/>
     <link rel="stylesheet" href="../styles/style.css"/>
@@ -63,10 +65,11 @@
           <p class="sign-up__phonenumber-title">Позвоните нам</p><a class="sign-up__phonenumber-call" href="tel:88004443348" title=""><img class="sign-up__phonenumber-icon" src="../img/icons/icon-1.png" alt="@@"/>
             <div class="sign-up__phonenumber-space"></div>8 800 444 33 48</a>
         </div>
-        <form class="form sign-up__form" action="/" method="post">
+        <form class="form sign-up__form send-form" action="mail.php" method="post">
           <p class="form__title">Или закажите обратный звонок</p>
           <div class="form__body">
-            <input class="form__input" type="text" placeholder="Номер телефона"/>
+            <input class="form__input phone-mask" type="text" placeholder="Номер телефона" required="required"/>
+            <input type="hidden" id="action" name="action" value="submitform"/>
             <input class="form__input" type="button" value="Заказать звонок"/>
           </div><span class="form__small-desc">Нажимая на кнопку, вы соглашаетесь с <a href="#" title="">политикой конфиденциальности</a></span>
         </form>
@@ -419,10 +422,11 @@
             <p class="sign-up-detail__block-title">По телефону</p><a class="sign-up-detail__block-phone" href="tel:88004443348" title="">8 800 444 33 48</a>
           </div>
           <div class="sign-up-detail__block">
-            <form class="form sign-up-detail__form" action="/" method="post">
+            <form class="form sign-up-detail__form send-form" action="mail.php" method="post">
               <p class="form__title">Или закажите обратный звонок</p>
               <div class="form__body">
-                <input class="form__input" type="text" placeholder="Номер телефона"/>
+                <input class="form__input phone-mask" type="text" placeholder="Номер телефона" required="required"/>
+                <input type="hidden" id="action" name="action" value="submitform"/>
                 <input class="form__input" type="button" value="Заказать звонок"/>
               </div><span class="form__small-desc">Нажимая на кнопку, вы соглашаетесь с <a href="#" title="">политикой конфиденциальности</a></span>
             </form>
@@ -464,6 +468,9 @@
     </footer>
     <!-- scripts-->
     <script src="../js/jquery-3.2.1.min.js"></script>
+    <script src="../js/jquery.mask.js"></script>
+    <script src="../js/wow.js"></script>
+    <script src="../js/jquery.bpopup.min.js"></script>
     <script src="../js/scripts.js"></script>
   </body>
 </html>

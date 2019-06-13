@@ -1,0 +1,69 @@
+// main
+
+.main {
+    position: relative;
+    height: 900px;
+    overflow: hidden;
+    background: @blue-dark url('../img/main-background.jpg') no-repeat center;
+    background-size: cover;
+    text-align: center;
+
+    &__title {
+        margin: 0;
+        margin-top: 340px;
+        padding: 0;
+        color: @white;
+        font-size: 52px;
+        font-family: 'serifr', sans-serif;
+        line-height: 62px;
+    }
+
+    &__description {
+        margin-top: 10px;
+        font-size: 28px;
+        font-family: 'lator', sans-serif;
+        line-height: 24px;
+        color: @yellow;
+        text-transform: uppercase;
+    }
+
+    &__grd {
+        bottom: 0;
+        width: 100%;
+        position: absolute;
+        height: 262px;
+        background: url('../img/main-grd.png') repeat-x;
+    }
+
+}
+
+// / main
+
+@media screen and (max-width: @tablet) {
+
+    .main {
+        padding-bottom: 60px;
+        height: auto;
+        text-align: left;
+
+        &__title {
+            margin-top: 400px;
+            font-size: 24px;
+            line-height: 32px;
+            font-weight: normal;
+        }
+
+        &__description {
+            font-size: 20px;
+            width: 75%;
+        }
+
+        &__grd {
+            margin-top: 140px;
+            height: 100px;
+            background: url('../img/main-grd.png') repeat-x bottom;
+        }
+
+    }
+
+}

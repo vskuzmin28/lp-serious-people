@@ -1,3 +1,28 @@
+/* window thanks */
+
+$('.send-form').submit(function() {
+    $.post($(this).attr('action'), $(this).serialize(), function(res) {         
+   if (res.success == 1) {
+       $('#popups-one').bPopup().close();
+         $('#okthanks').bPopup({
+           closeClass:'close-popup-one',
+               amsl: 0
+          });
+         setTimeout(function(){$('#okthanks').bPopup().close();}, 6000);
+     }else{
+     alert(res.text);
+     }
+  }, 'json');
+  return false;
+})
+
+/* wow animation */
+
+new WOW().init();
+
+// mask
+$('.phone-mask').mask('+7 (000) 000 0000');
+
 // specialists
 
 $('.specialistContentTwo, .specialistContentThree, .specialistContentFour, .specialistContentFive').hide();
