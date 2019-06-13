@@ -74,3 +74,47 @@
 }
 
 // / team
+
+@media screen and (max-width: @tablet) {
+
+    .team {
+        padding-bottom: 0px;
+
+        &__title {
+            font-size: 22px;
+            line-height: 28px;
+        }
+
+        &__photo {
+            position: relative;
+        }
+
+        &__list {
+            margin: 0;
+            margin-top: 60px;
+            padding: 0;
+            list-style: none;
+            color: @white;
+            display: flex;
+            flex-wrap: nowrap;
+            flex-direction: column;
+
+            &-item {
+                width: 100%;
+            }
+
+            &-title {
+                font-size: 20px;
+                line-height: 24px;
+            }
+
+            &-desc {
+                font-size: 16px;
+                line-height: 20px;
+            }
+
+        }
+
+    }
+
+}

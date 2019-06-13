@@ -19,7 +19,7 @@
     }
 
     &__description {
-        margin-top: 50px;
+        margin-top: 10px;
         font-size: 28px;
         font-family: 'lator', sans-serif;
         line-height: 24px;
@@ -38,3 +38,32 @@
 }
 
 // / main
+
+@media screen and (max-width: @tablet) {
+
+    .main {
+        padding-bottom: 60px;
+        height: auto;
+        text-align: left;
+
+        &__title {
+            margin-top: 400px;
+            font-size: 24px;
+            line-height: 32px;
+            font-weight: normal;
+        }
+
+        &__description {
+            font-size: 20px;
+            width: 75%;
+        }
+
+        &__grd {
+            margin-top: 140px;
+            height: 100px;
+            background: url('../img/main-grd.png') repeat-x bottom;
+        }
+
+    }
+
+}

@@ -113,3 +113,74 @@
     }
 
 }
+
+@media screen and (max-width: @tablet) {
+
+    .plan {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        background: 0;
+    
+        &__title-full {
+            width: 100%;
+            padding: 0 5%;
+            box-sizing: border-box;
+            color: @black;
+            font-size: 22px;
+            line-height: 28px;
+        }
+
+        &__description {
+            color: @black;
+            width: 100%;
+            padding: 0 5%;
+            box-sizing: border-box;
+        }
+
+        &__list {
+            width: 100%;
+
+            &-item {
+                margin-bottom: 23px;
+                padding: 0;
+                list-style: none;
+                color: @black;
+                display: flex;
+                width: 100%;
+                flex-direction: column;
+                justify-content: center;
+                text-align: center;
+            }
+
+            &-body {
+                width: 100%;
+            }
+
+            &-icon {
+                margin: 0 auto;
+                margin-bottom: 20px;
+            }
+
+        }
+
+        &__specialists {
+            display: none;
+        }
+
+        &__container {
+            width: 100%;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+    
+            &:nth-child(1) {
+                width: 100%;
+                height: auto;
+                flex-direction: column;
+            }
+    
+        }
+    }
+
+}

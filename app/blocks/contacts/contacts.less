@@ -82,3 +82,43 @@
 }
 
 // / contacts
+
+@media screen and (max-width: @desktop) {
+
+    .card {
+        padding: 20px;
+        width: 100%;
+        box-sizing: border-box;
+
+        &__title {
+            font-size: 22px;
+            line-height: 28px;
+            text-align: left;
+        }
+
+        &__item {
+            flex-direction: column;
+            text-align: left;
+            justify-content: flex-start;
+
+            &-title {
+                width: 100%;
+                font-size: 18px;
+            }
+
+        }
+
+    }
+
+    .contacts {
+        position: relative;
+    
+        .card {
+            margin-bottom: 20px;
+            top: 0px;
+            position: relative;
+        }
+    
+    }
+
+}

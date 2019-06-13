@@ -6,7 +6,7 @@ $('.photoTwo, .photoThree, .photoFour, .photoFive').hide();
 $('.specialistOne').click(function(e){
     e.preventDefault();
     $('.specialistOne').addClass('specialists__list-link_active');
-    $('.specialistTwo, .specialistThree, .specialistFour').removeClass('specialists__list-link_active');
+    $('.specialistTwo, .specialistThree, .specialistFour, .specialistFive').removeClass('specialists__list-link_active');
     $('.photoOne, .specialistContentOne').fadeIn();
     $('.photoTwo, .photoThree, .photoFour, .photoFive').hide();
     $('.specialistContentTwo, .specialistContentThree, .specialistContentFour, .specialistContentFive').hide();
@@ -15,7 +15,7 @@ $('.specialistOne').click(function(e){
 $('.specialistTwo').click(function(e){
     e.preventDefault();
     $('.specialistTwo').addClass('specialists__list-link_active');
-    $('.specialistOne, .specialistThree, .specialistFour').removeClass('specialists__list-link_active');
+    $('.specialistOne, .specialistThree, .specialistFour, .specialistFive').removeClass('specialists__list-link_active');
     $('.photoTwo, .specialistContentTwo').fadeIn();
     $('.photoOne, .photoThree, .photoFour, .photoFive').hide();
     $('.specialistContentOne, .specialistContentThree, .specialistContentFour, .specialistContentFive').hide();
@@ -24,7 +24,7 @@ $('.specialistTwo').click(function(e){
 $('.specialistThree').click(function(e){
     e.preventDefault();
     $('.specialistThree').addClass('specialists__list-link_active');
-    $('.specialistTwo, .specialistOne, .specialistFour').removeClass('specialists__list-link_active');
+    $('.specialistTwo, .specialistOne, .specialistFour, .specialistFive').removeClass('specialists__list-link_active');
     $('.photoThree, .specialistContentThree').fadeIn();
     $('.photoTwo, .photoOne, .photoFour, .photoFive').hide();
     $('.specialistContentOne, .specialistContentTwo, .specialistContentFour, .specialistContentFive').hide();
@@ -33,7 +33,7 @@ $('.specialistThree').click(function(e){
 $('.specialistFour').click(function(e){
     e.preventDefault();
     $('.specialistFour').addClass('specialists__list-link_active');
-    $('.specialistTwo, .specialistOne, .specialistThree, .specialistsFive').removeClass('specialists__list-link_active');
+    $('.specialistTwo, .specialistOne, .specialistThree, .specialistFive').removeClass('specialists__list-link_active');
     $('.photoFour, .specialistContentFour').fadeIn();
     $('.photoTwo, .photoOne, .photoThree, .photoFive').hide();
     $('.specialistContentOne, .specialistContentTwo, .specialistContentThree, .specialistContentFive').hide();
@@ -42,7 +42,7 @@ $('.specialistFour').click(function(e){
 $('.specialistFive').click(function(e){
     e.preventDefault();
     $('.specialistFive').addClass('specialists__list-link_active');
-    $('.specialistTwo, .specialistOne, .specialistThree, .specialistsFour').removeClass('specialists__list-link_active');
+    $('.specialistTwo, .specialistOne, .specialistThree, .specialistFour').removeClass('specialists__list-link_active');
     $('.photoFive, .specialistContentFive').fadeIn();
     $('.photoTwo, .photoOne, .photoThree, .photoFour').hide();
     $('.specialistContentOne, .specialistContentTwo, .specialistContentThree, .specialistContentFour').hide();

@@ -122,3 +122,44 @@
 }
 
 // / footer
+
+@media screen and (max-width: @desktop) {
+
+    .footer {
+        height: auto;
+
+        &__container {
+            margin: 20px 5%;
+            flex-direction: column;
+
+            &_small {
+                margin: 20px 5%;
+                height: auto;
+            }
+
+        }
+
+        &__logo {
+            margin-bottom: 10px;
+            width: 50%;
+            height: auto;
+
+            img {
+                width: 150%;
+                height: auto;
+            }
+
+        }
+
+
+        &__site-info {
+            margin-bottom: 10px;
+        }
+
+        &__desc {
+            width: 100%;
+        }
+
+    }
+
+}

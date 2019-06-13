@@ -13,7 +13,7 @@
 
     &__block {
         top: -90px;
-        position: absolute;
+        position: absolute; 
         right: 20px;
         width: 862px;
         height: 1002px;
@@ -207,6 +207,62 @@
         width: 54px;
         height: 54px;
         cursor: pointer;
+    }
+
+}
+
+@media screen and (max-width: @tablet) {
+
+    .cases {
+        height: auto;
+
+        &__slider-buttons {
+            position: relative;
+            top: 0;
+            right: 0;
+            margin: 20px 0;
+        }
+
+        &__title {
+            font-size: 22px;
+            line-height: 28px;
+            width: 100%;
+            margin: 0;
+        }
+
+        &__block {
+            top: 20px;
+            right: 0;
+            padding: 10%;
+            box-sizing: border-box;
+            position: relative;
+            width: 100%;
+            height: auto;
+        }
+
+    }
+
+    .slider-nav {
+        display: none;
+    }
+
+    .slides {
+        margin: 0;
+        width: 100%;
+        height: auto;
+
+        &__item {
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        &__main-title {
+            width: 100%;
+            box-sizing: border-box;
+            font-size: 22px;
+            line-height: 28px;
+        }
+
     }
 
 }

@@ -217,3 +217,146 @@
 }
 
 // specialists
+
+@media screen and (max-width: @tablet) {
+
+    .specialists {
+        height: auto;
+
+        &__photo {
+            display: none !important;
+        }
+
+        &__slide, &__slide-content {
+            height: auto;
+        }
+
+        &__slide-name {
+            font-size: 22px;
+            line-height: 28px;
+        }
+
+        &__space-top {
+            display: none;
+        }
+
+        &__container {
+            flex-direction: column;
+            height: auto;
+
+            &:nth-child(1) {
+                width: 100%;
+                height: 120px;
+            }
+        }
+
+        &__box {
+            height: auto;
+            padding: 0;
+        }
+
+        &__title {
+            width: 80%;
+            margin: 30px auto;
+            font-size: 22px;
+            line-height: 28px;
+        }
+
+        &__slide {
+            width: 90%;
+            margin: 30px 5%;
+        }
+
+        &__list {
+            position: relative;
+            margin: 0;
+            padding: 0 5%;
+            width: 100%;
+            height: 100px;
+            z-index: 10;
+            margin-top: 0;
+            box-sizing: border-box;
+            bottom: 0px;
+            display: flex;
+            justify-content: center;
+            list-style: none;
+    
+            &-item {
+                margin-right: 24px;
+                position: relative;
+                width: 45px;
+                height: 45px;
+                border-radius: 50%;
+    
+                &:last-child {
+                    margin-right: 0;
+                }
+    
+            }
+    
+            &-link {
+                top: 0;
+                display: flex;
+                width: 100%;
+                height: 100%;
+                border-radius: 50%;
+                border: 5px solid transparent;
+                background: url('../img/specialist-link.png') repeat-x 0px 100px;
+                z-index: 112;
+                opacity: 1;
+                display: flex;
+                align-items: flex-end;
+                text-decoration: none;
+    
+                &:hover, &_active {
+                    border-color: @yellow;
+                    text-decoration: none;
+                }
+    
+            }
+    
+            &-photo {
+                top: 0;
+                position: absolute;
+                z-index: -1;
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+            }
+    
+            &-box {
+                margin: 0 0 0 0;
+                display: none;
+                flex-direction: column;
+                height: auto;
+            }
+    
+            &-surname, &-name {
+                margin: 0 15px;
+                padding: 0;
+                display: block;
+                width: 100%;
+                font-size: 14px;
+                font-family: 'latob', sans-serif;
+                color: @white;
+                line-height: 18px;
+                text-decoration: none;
+            }
+    
+            &-name {
+                margin-bottom: 4px;
+            }
+    
+            &-post {
+                margin: 0 5px 11px 15px;
+                font-size: 14px;
+                font-family: 'lator', sans-serif;
+                color: @yellow;
+                line-height: 18px; 
+            }
+    
+        }
+
+    }
+
+}
