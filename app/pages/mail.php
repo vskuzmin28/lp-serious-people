@@ -18,13 +18,12 @@ if(isset($_POST['action']) && $_POST['action'] == 'submitform')
     //headers and subject
     $headers  = "MIME-Version: 1.0\r\n";
     $headers .= "Content-type: text/html; charset=UTF-8\r\n";
-    $headers .= "From: SolidLabs Automailer <support@solid-labs.ru>\r\n";
+    $headers .= "From: Automailer <support@domain.ru>\r\n";
     
     $body = "Новый запрос по форме обратной связи<br />";
     $body .= "Имя: ".$name."<br />";
     $body .= "Телефон: ".$tel."<br />";
     if(isset($_POST['email'])) { $body .= "Почта: ".$email."<br />"; } 
-    if(isset($_POST['pack'])) { $body .= "Что заказали: ".$pack."<br />"; }   
     $body .= "IP: ".$ip."<br />";
     
     $send = mail($to, $subject, $body, $headers);
