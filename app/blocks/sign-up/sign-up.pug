@@ -1,8 +1,8 @@
 mixin sign-up(data)
     - data = data || {};
     section.sign-up(class = data.class role = data.role)
-        h2.sign-up__title.wow.fadeInDown!=data.title
-        .sign-up__body.wow.fadeInDown
+        h2.sign-up__title.wow.fadeIn!=data.title
+        .sign-up__body.wow.fadeIn
             .sign-up__phonenumber
                 p.sign-up__phonenumber-title Позвоните нам
                 a.sign-up__phonenumber-call(href = data.tel title="")
@@ -22,9 +22,9 @@ mixin sign-up-detail(data)
     section.sign-up-detail(class = data.class role = data.role)
         .container.sign-up-detail__container
             .sign-up-detail__column
-                h2.sign-up-detail__title.wow.fadeInDown!=data.title
-                p.sign-up-detail__desc.wow.fadeInDown!=data.description
-            .sign-up-detail__column.wow.fadeInDown
+                h2.sign-up-detail__title.wow.fadeIn!=data.title
+                p.sign-up-detail__desc.wow.fadeIn!=data.description
+            .sign-up-detail__column.wow.fadeIn
                 h3.sign-up-detail__subtitle Запишитесь на консультацию
                 .sign-up-detail__block
                     p.sign-up-detail__block-title По телефону

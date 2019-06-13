@@ -2,12 +2,12 @@ mixin team(data)
     - data = data || {};
     section.team(class = data.class role = data.role)
         .container.team__container
-            h2.team__title.wow.fadeInDown!=data.title
+            h2.team__title.wow.fadeIn!=data.title
             ul.team__list
                 each team in data.items
-                    li.team__list-item.wow.fadeInDown
+                    li.team__list-item.wow.fadeIn
                         p.team__list-title!=team.title
                         span.team__list-desc!=team.description
-            .team__photo
+            .team__photo.wow.fadeInUp
                 img(src = data.photo alt = data.alt)
                     

@@ -4,7 +4,7 @@ mixin footer(data)
         .container.footer__container
             a.footer__logo(href = data.link, title = data.title)
                 img(src = data.src, alt = data.alt)
-            .footer__site-info.wow.fadeInDown
+            .footer__site-info.wow.fadeIn
                 p.header__desc!=data.desc
                 span.header__keys!=data.keys
             .footer__call-info
