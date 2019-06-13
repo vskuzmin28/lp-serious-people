@@ -3,7 +3,7 @@
 $('.send-form').submit(function() {
     $.post($(this).attr('action'), $(this).serialize(), function(res) {         
    if (res.success == 1) {
-       $('.popup').bPopup().close();
+       $('.popupCall').bPopup().close();
          $('.popupThanks').bPopup({
            closeClass:'close-popup-one',
                amsl: 0
@@ -42,6 +42,8 @@ $('.linkPolytic').click(function(e){
 
 // mask
 $('.phone-mask').mask('+7 (000) 000 0000');
+
+$(".phone-mask").prop("required", "true");
 
 // specialists
 

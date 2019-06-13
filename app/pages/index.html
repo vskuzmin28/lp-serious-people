@@ -12,7 +12,6 @@
     <meta name="description" content=""/>
     <meta name="keywords" content=""/>
     <link rel="stylesheet" href="../styles/normalize.css"/>
-    <link rel="stylesheet" href="../styles/animate.css"/>
     <link rel="stylesheet" href="../styles/style.css"/>
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries-->
     <!-- WARNING: Respond.js doesn't work if you view the page via file://-->
@@ -67,9 +66,9 @@
         <form class="form sign-up__form send-form" action="mail.php" method="post">
           <p class="form__title">Или закажите обратный звонок</p>
           <div class="form__body">
-            <input class="form__input phone-mask" type="text" placeholder="Номер телефона" required="required"/>
+            <input class="form__input phone-mask" type="text" name="tel" placeholder="Номер телефона"/>
             <input type="hidden" id="action" name="action" value="submitform"/>
-            <input class="form__input" type="button" value="Заказать звонок"/>
+            <input class="form__input" type="submit" value="Заказать звонок"/>
           </div><span class="form__small-desc">Нажимая на кнопку, вы соглашаетесь с <a class="linkPolytic" href="#" title="">политикой конфиденциальности</a></span>
         </form>
       </div>
@@ -424,9 +423,9 @@
             <form class="form sign-up-detail__form send-form" action="mail.php" method="post">
               <p class="form__title">Или закажите обратный звонок</p>
               <div class="form__body">
-                <input class="form__input phone-mask" type="text" placeholder="Номер телефона" required="required"/>
+                <input class="form__input phone-mask" type="text" name="tel" placeholder="Номер телефона"/>
                 <input type="hidden" id="action" name="action" value="submitform"/>
-                <input class="form__input" type="button" value="Заказать звонок"/>
+                <input class="form__input" type="submit" value="Заказать звонок"/>
               </div><span class="form__small-desc">Нажимая на кнопку, вы соглашаетесь с <a class="linkPolytic" href="#" title="">политикой конфиденциальности</a></span>
             </form>
           </div>
@@ -468,12 +467,12 @@
     <!-- popups-->
     <section class="popup popupCall" role="popup call">
       <h2 class="popup__title">Запишитесь на консультацию</h2><a class="popup__close" href="#" title=""><img class="popup__icon" src="../img/icons/icon-13.png" alt="@@"/></a>
-      <form class="form send-form popup__form" action="mail.php" method="post">
+      <form class="form send-form popup__form" action="../mail.php" method="post">
         <input class="form__input" type="text" name="name" placeholder="Ваше имя" required="required"/>
         <input class="form__input" type="text" name="email" placeholder="E-mail" required="required"/>
         <input class="form__input phone-mask" type="text" name="tel" placeholder="Номер телефона" required="required"/>
         <input type="hidden" id="action" name="action" value="submitform"/>
-        <input class="form__input" type="button" value="Заказать звонок"/>
+        <input class="form__input" type="submit" value="Заказать звонок"/>
       </form>
     </section>
     <section class="popup popupThanks">
@@ -501,7 +500,7 @@
       <p class="popup__content">Бюро правовой экспертизы «Серьезные люди» оставляет за собой право вносить изменения в одностороннем порядке в настоящую форму согласия на обработку персональных данных, при условии, что изменения не противоречат действующему законодательству РФ. Изменения формы согласия на обработку персональных данных вступают в силу после их публикации на Сайте</p>
     </section>
     <!-- scripts-->
-    <script src="../js/jquery-3.2.1.min.js"></script>
+    <script src="../js/jquery-3.4.1.min.js"></script>
     <script src="../js/jquery.mask.js"></script>
     <script src="../js/wow.js"></script>
     <script src="../js/jquery.bpopup.min.js"></script>

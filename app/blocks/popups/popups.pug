@@ -4,12 +4,12 @@ mixin popup(data)
         h2.popup__title!=data.title
         a.popup__close(href="#" title="")
             img.popup__icon(src="../img/icons/icon-13.png" alt="@@")
-        form.form.send-form.popup__form(action='mail.php' method='post')
+        form.form.send-form.popup__form(action='../mail.php' method='post')
             input.form__input(type="text" name='name' placeholder='Ваше имя' required)
             input.form__input(type="text" name='email' placeholder='E-mail' required)
             input.form__input.phone-mask(type="text" name='tel' placeholder='Номер телефона' required)
             input(type="hidden" id="action" name="action" value="submitform")
-            input.form__input(type='button' value='Заказать звонок')
+            input.form__input(type='submit' value='Заказать звонок')
 
 mixin popupPolytic(data)
     - data = data || {};

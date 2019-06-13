@@ -12,9 +12,9 @@ mixin sign-up(data)
             form.form.sign-up__form.send-form(action='mail.php' method='post')
                 p.form__title Или закажите обратный звонок
                 .form__body
-                    input.form__input.phone-mask(type="text" placeholder='Номер телефона' required)
+                    input.form__input.phone-mask(type="text" name='tel' placeholder='Номер телефона')
                     input(type="hidden" id="action" name="action" value="submitform")
-                    input.form__input(type='button' value='Заказать звонок')
+                    input.form__input(type='submit' value='Заказать звонок')
                 span.form__small-desc Нажимая на кнопку, вы соглашаетесь с <a class="linkPolytic" href="#" title="">политикой конфиденциальности</a>
 
 mixin sign-up-detail(data)
@@ -33,9 +33,9 @@ mixin sign-up-detail(data)
                     form.form.sign-up-detail__form.send-form(action='mail.php' method='post')
                         p.form__title Или закажите обратный звонок
                         .form__body
-                            input.form__input.phone-mask(type="text" placeholder='Номер телефона' required)
+                            input.form__input.phone-mask(type="text" name='tel' placeholder='Номер телефона')
                             input(type="hidden" id="action" name="action" value="submitform")
-                            input.form__input(type='button' value='Заказать звонок')
+                            input.form__input(type='submit' value='Заказать звонок')
                         span.form__small-desc Нажимая на кнопку, вы соглашаетесь с <a class="linkPolytic" href="#" title="">политикой конфиденциальности</a>
 
 
