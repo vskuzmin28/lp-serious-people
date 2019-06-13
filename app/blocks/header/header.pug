@@ -9,4 +9,4 @@ mixin header(data)
                 span.header__keys!=data.keys
             .header__call-info
                 a.header__phonenumber(href = data.tel title="")!=data.phonenumber
-                a.call-popop.header__call-popup(href="#"  title="") Заказать обратный звонок
+                a.call-popop.header__call-popup.linkCall(href="#"  title="") Заказать обратный звонок

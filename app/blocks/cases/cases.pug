@@ -3,14 +3,14 @@ mixin cases(data)
     section.cases(class = data.class role = data.role)
         .container.cases__container
             .cases__block
-                h2.cases__title!=data.title
+                h2.cases__title.wow.fadeInDown!=data.title
                 .slider-buttons.cases__slider-buttons
                     .slider-buttons__button.slider-buttons__prev
                         img(src='../img/icons/icon-12.png' alt="@@")
                     .slider-buttons__button.slider-buttons__next
                         img(src='../img/icons/icon-12.png' alt="@@")
                 .slider.cases__slider
-                    ul.slider-nav
+                    ul.slider-nav.wow.fadeInDown
                         each cases in data.items
                             li.slider-nav__item
                                 a.slider-nav__link(class = cases.class href="#" title="")
@@ -21,7 +21,7 @@ mixin cases(data)
                 .slides-body
                     .slides-body__space-top
                     .slides-body__space-bottom
-                    ul.slides.cases__slides
+                    ul.slides.cases__slides.wow.fadeInUp
                         each slides in data.itemsSlides
                             li.slides__item(class = slides.class)
                                 span.slides__name!=slides.name

@@ -2,11 +2,11 @@ mixin plan(data)
     - data = data || {};
     section.plan(class = data.class role = data.role)
         .container.plan__container
-            h2.plan__title-full!=data.title
-            p.plan__description!=data.description
+            h2.plan__title-full.wow.fadeInDown!=data.title
+            p.plan__description.wow.fadeInDown!=data.description
         .container.plan__container
             .block.block_white.plan__block
-                ul.plan__list
+                ul.plan__list.wow.fadeInDown
                     each plan in data.items
                         li.plan__list-item 
                             .plan__list-icon
@@ -15,5 +15,5 @@ mixin plan(data)
                                 p.plan__list-title!=plan.title
                                 span.plan__list-desc!=plan.description
             .block.block_transparent.plan__block
-                .plan__specialists
+                .plan__specialists.wow.fadeInUp
                     img(src = data.photo alt='@@')

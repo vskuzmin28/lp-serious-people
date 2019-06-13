@@ -1,8 +1,8 @@
 mixin sign-up(data)
     - data = data || {};
     section.sign-up(class = data.class role = data.role)
-        h2.sign-up__title!=data.title
-        .sign-up__body
+        h2.sign-up__title.wow.fadeInDown!=data.title
+        .sign-up__body.wow.fadeInDown
             .sign-up__phonenumber
                 p.sign-up__phonenumber-title Позвоните нам
                 a.sign-up__phonenumber-call(href = data.tel title="")
@@ -15,16 +15,16 @@ mixin sign-up(data)
                     input.form__input.phone-mask(type="text" placeholder='Номер телефона' required)
                     input(type="hidden" id="action" name="action" value="submitform")
                     input.form__input(type='button' value='Заказать звонок')
-                span.form__small-desc Нажимая на кнопку, вы соглашаетесь с <a href="#" title="">политикой конфиденциальности</a>
+                span.form__small-desc Нажимая на кнопку, вы соглашаетесь с <a class="linkPolytic" href="#" title="">политикой конфиденциальности</a>
 
 mixin sign-up-detail(data)
     - data = data || {};
     section.sign-up-detail(class = data.class role = data.role)
         .container.sign-up-detail__container
             .sign-up-detail__column
-                h2.sign-up-detail__title!=data.title
-                p.sign-up-detail__desc!=data.description
-            .sign-up-detail__column
+                h2.sign-up-detail__title.wow.fadeInDown!=data.title
+                p.sign-up-detail__desc.wow.fadeInDown!=data.description
+            .sign-up-detail__column.wow.fadeInDown
                 h3.sign-up-detail__subtitle Запишитесь на консультацию
                 .sign-up-detail__block
                     p.sign-up-detail__block-title По телефону
@@ -36,6 +36,6 @@ mixin sign-up-detail(data)
                             input.form__input.phone-mask(type="text" placeholder='Номер телефона' required)
                             input(type="hidden" id="action" name="action" value="submitform")
                             input.form__input(type='button' value='Заказать звонок')
-                        span.form__small-desc Нажимая на кнопку, вы соглашаетесь с <a href="#" title="">политикой конфиденциальности</a>
+                        span.form__small-desc Нажимая на кнопку, вы соглашаетесь с <a class="linkPolytic" href="#" title="">политикой конфиденциальности</a>
 
 

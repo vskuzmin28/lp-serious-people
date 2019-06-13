@@ -4,12 +4,12 @@ mixin footer(data)
         .container.footer__container
             a.footer__logo(href = data.link, title = data.title)
                 img(src = data.src, alt = data.alt)
-            .footer__site-info
+            .footer__site-info.wow.fadeInDown
                 p.header__desc!=data.desc
                 span.header__keys!=data.keys
             .footer__call-info
                 a.footer__phonenumber(href = data.tel title="")!=data.phonenumber
-                a.call-popop.footer__call-popup(href="#"  title="") Заказать звонок
+                a.call-popop.footer__call-popup.linkCall(href="#"  title="") Заказать звонок
         .container.footer__container.footer__container_small
             p.footer__copyright!=data.copyright
-            a.footer__polytic(href="#" title="") Политика обработки персональных данных
+            a.footer__polytic.linkPolytic(href="#" title="") Политика обработки персональных данных

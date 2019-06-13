@@ -10,7 +10,7 @@ include ../blocks/plan/plan
 include ../blocks/situations/situations
 include ../blocks/contacts/contacts
 include ../blocks/footer/footer
-//include ../blocks/popups/popups
+include ../blocks/popups/popups
 
 doctype html
 html(lang='ru')
@@ -275,6 +275,23 @@ html(lang='ru')
       phonenumber: '8 800 444 33 48',
       tel: 'tel:88004443348',
       copyright: '© 2012-2019, ООО «Серьезные люди»'
+    })
+
+    // popups
+    +popup({
+      class: 'popupCall',
+      role: 'popup call',
+      title: 'Запишитесь на консультацию'
+    })
+
+    +popupThanks({
+      title: 'Заявка успешно отправлена!'
+    })
+
+    +popupPolytic({
+      class: 'popup_long',
+      role: '',
+      title: 'Политика конфиденциальности'
     })
 
     // scripts

@@ -12,7 +12,7 @@ if(isset($_POST['action']) && $_POST['action'] == 'submitform')
   //
   $ip = gethostbyname($_SERVER['REMOTE_ADDR']); 
 
-    $to = 'maksjay@gmail.com,shakirov.vadimka@bk.ru';
+    $to = 'vskuzmin28@gmail.com';
     $subject = "Форма обратной связи";
      
     //headers and subject

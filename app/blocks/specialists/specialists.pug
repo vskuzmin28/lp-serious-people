@@ -2,9 +2,9 @@ mixin specialists(data)
     - data = data || {};
     section.specialists(class = data.class role = data.role)
         .container.specialists__container
-            h2.specialists__title!=data.title
+            h2.specialists__title.wow.fadeIn!=data.title
         .container.specialists__container
-            ul.specialists__list
+            ul.specialists__list.wow.fadeIn
                 each list in data.itemsList
                     li.specialists__list-item
                         a.specialists__list-link(class = list.class href="#" title="")
@@ -14,7 +14,7 @@ mixin specialists(data)
                                 span.specialists__list-post!=list.post
                         img.specialists__list-photo(src = list.photo alt="@@")
 
-            .block.block_white.specialists__block
+            .block.block_white.specialists__block.wow.fadeIn
                 .specialists__space-top
                 .specialists__space-bottom
                 .specialists__slide
