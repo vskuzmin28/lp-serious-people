@@ -1,7 +1,7 @@
 {
-  "name": "task",
+  "name": "lp-seriousman",
   "version": "1.0",
-  "description": "test task",
+  "description": "landing page for seriousman.ru",
   "main": "a",
   "dependencies": {
     "browser-sync": "^2.18.12",
@@ -28,6 +28,6 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Vitaliy Kuzmin",
+  "author": "Vitaliy Kuzmin (vskuzmin28)",
   "license": "ISC"
 }
