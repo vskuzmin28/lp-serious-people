@@ -1,12 +1,5 @@
-// normalize
-
-@import '../styles/normalize.css';
-
 // fonts & variables
 
-@import url('https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i&subset=cyrillic,cyrillic-ext');
-
-@import '../styles/fonts.css';
 @import '../styles/helpers/variables.less';
 @import '../styles/helpers/sprite.less';
 
@@ -34,6 +27,7 @@ a, a:hover, .button, .slider-buttons__button, input {
 // body
 
 body {
+  margin: 0;
   background: @white;
 	cursor: default;
   overflow-x: hidden;
@@ -160,4 +154,9 @@ body *::selection {
     position: relative;
     width: 100%;
   }
+
+  .form__input[type='submit'] {
+    width: 100%;
+  }
+
 }

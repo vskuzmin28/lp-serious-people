@@ -114,7 +114,7 @@ gulp.task('sprite', ['sprite-clean'], function() {
 // optimize images
 
 gulp.task('img', function() {
-	return gulp.src('app/img/**/*') // Берем все изображения из dev
+	return gulp.src('app/img/**/*.*') // Берем все изображения из dev
 		.pipe(cache(imagemin({  // Сжимаем их с наилучшими настройками с учетом кеширования
 			interlaced: true,
 			progressive: true,
@@ -127,9 +127,9 @@ gulp.task('img', function() {
 // optimize css
 
 gulp.task('css', function() {
-    return gulp.src(['dist/style/**/*.less'])
+    return gulp.src(['app/styles/**/*.less'])
         .pipe(concat('style.min.less')) // Собираем их в кучу в новом файле
-        .pipe(gulp.dest('app/styles')) // Выгружаем в папку pub/styles
+        .pipe(gulp.dest('dist/styles')) // Выгружаем в папку pub/styles
 })
 
 // develomnet (watch + browserSync)

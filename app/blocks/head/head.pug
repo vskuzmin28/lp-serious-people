@@ -8,15 +8,10 @@ mixin head(data)
         link(rel="icon" type="image/png" href="../img/favicons/16x16.png" sizes="16x16")
         link(rel="icon" type="image/png" href="../img/favicons/32x32.png" sizes="32x32")
         link(rel="icon" type="image/png" href="../img/favicons/96x96.png" sizes="96x96")
+        link(rel='stylesheet', href='../styles/normalize.css', media="all")
+        link(rel='stylesheet', href='../styles/fonts.css', media="all")
+        link(rel='stylesheet', href='../styles/animate.css', media="all")
+        link(rel='stylesheet', href='../styles/style.css', media="all")
         title!=data.title
         meta(name="description" content = data.description)
         meta(name="keywords" content = data.keywords)
-        link(rel='stylesheet', href='../styles/normalize.css')
-        link(rel='stylesheet', href='../styles/animate.css')
-        link(rel='stylesheet', href='../styles/style.css')
-
-        // HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries
-        // WARNING: Respond.js doesn't work if you view the page via file://
-        //if lt IE 9
-        script(src='https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js')
-        script(src='https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js')
